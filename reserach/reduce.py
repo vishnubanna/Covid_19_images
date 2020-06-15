@@ -1,7 +1,8 @@
 import os
 import cv2
 
-folders = ["1yY7h9xkXt","4mKEIb96LV","113644aeaa","0369289ba3","bcfe3110b5","h5SGg1wbzT","h092zALqYg", "OVZjQQIIYf", "U7REmkvwZs"]
+#folders = ["1yY7h9xkXt","4mKEIb96LV","113644aeaa","0369289ba3","bcfe3110b5","h5SGg1wbzT","h092zALqYg", "OVZjQQIIYf", "U7REmkvwZs"]
+folders = ["OVZjQQIIYf"]
 
 def get_hw(image, width):
     sp = image.shape[:2] #height width
