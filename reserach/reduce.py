@@ -1,8 +1,7 @@
 import os
 import cv2
 
-folder = "Sm7vwNhHoV/"
-
+folders = ["1yY7h9xkXt","4mKEIb96LV","113644aeaa","0369289ba3","bcfe3110b5","h5SGg1wbzT","h092zALqYg", "OVZjQQIIYf", "U7REmkvwZs"]
 
 def get_hw(image, width):
     sp = image.shape[:2] #height width
@@ -21,8 +20,14 @@ def resise_save(image):
     cv2.imwrite(image, img)
     print(width, height, img.shape)
 
-for root, dirs, files in os.walk(folder, topdown=False):
-    print(root, dirs, files)
-    for file in files:
-        
-        resise_save(f"{folder}/{file}")
+def folder_run(folder):
+    for root, dirs, files in os.walk(folder, topdown=False):
+        print(root, dirs, files)
+        for file in files:
+            try:
+                resise_save(f"{folder}/{file}")
+            except:
+                print(file)
+
+for folder in folders:
+    folder_run(folder)
